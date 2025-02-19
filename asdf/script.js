@@ -34,4 +34,5 @@ function yaDitekan() {
     gambar.src = "happy.gif";
     tombolYa.style.visibility = "hidden";
     tombolTidak.style.visibility = "hidden";
+    gambar.style.visibility = "visible";
 }
