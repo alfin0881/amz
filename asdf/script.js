@@ -20,7 +20,9 @@ function tidakDitekan() {
     let angkaRandom = Math.floor(Math.random() * 500);
     document.documentElement.clientWidth;
     let angkaRandom2 = Math.floor(Math.random() * 500);
+    let angkaRandom3 = Math.floor(Math.random() * 500);
     document.documentElement.clientHeight;
     tombolTidak.style.top = angkaRandom + "px";
     tombolTidak.style.right = angkaRandom2 + "px";
+    tombolTidak.style.right = angkaRandom3 + "px";
 }
