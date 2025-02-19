@@ -19,8 +19,8 @@ function tidakDitekan() {
     tombolTidak.style.position = "absolute";
     let angkaRandom = Math.floor(Math.random() * 500);
     document.documentElement.clientWidth;
-    let angkaRandom2 = Math.floor(Math.random() * 500);
-    let angkaRandom3 = Math.floor(Math.random() * 500);
+    let angkaRandom2 = Math.floor(Math.random() * 600);
+    let angkaRandom3 = Math.floor(Math.random() * 600);
     document.documentElement.clientHeight;
     tombolTidak.style.top = angkaRandom + "px";
     tombolTidak.style.right = angkaRandom2 + "px";
