@@ -24,5 +24,5 @@ function tidakDitekan() {
     document.documentElement.clientHeight;
     tombolTidak.style.top = angkaRandom + "px";
     tombolTidak.style.right = angkaRandom2 + "px";
-    tombolTidak.style.right = angkaRandom3 + "px";
+    tombolTidak.style.left = angkaRandom3 + "px";
 }
