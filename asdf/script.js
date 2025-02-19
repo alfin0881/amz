@@ -31,7 +31,7 @@ function tidakDitekan() {
 }
 function yaDitekan() {
     kalimat.innerHTML = "❤️Makasih Ya \^o^/❤️, https://github.com/alfin0881/amz";
-    gambar.src = "/happy.gif";
+    gambar.src = "happy.gif";
     tombolYa.style.visibility = "hidden";
     tombolTidak.style.visibility = "hidden";
 }
