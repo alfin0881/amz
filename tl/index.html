@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>location</title>
+  </head>
+  <body>
+    <h1>Welcome</h1>
+    <a href="#" id="trackLink"> <button>Track</button></a>
+
+    <script>
+      document.getElementById("trackLink").addEventListener("click", function (event) {
+        event.preventDefault(); // Mencegah link default
+
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            function (position) {
+              const latitude = position.coords.latitude;
+              const longitude = position.coords.longitude;
+
+              // Kirim data lokasi ke server
+              fetch("track_location.php", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ latitude, longitude }),
+              })
+                .then((response) => response.text())
+                .then((data) => {
+                  alert("Your Location: " + data);
+                })
+                .catch((error) => {
+                  console.error("Error:", error);
+                });
+            },
+            function () {
+              alert("Gagal.");
+            }
+          );
+        } else {
+          alert("Geolocation tidak didukung oleh browser ini.");
+        }
+      });
+    </script>
+  </body>
+</html>
