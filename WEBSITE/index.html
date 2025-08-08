@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klinik - Layanan Kesehatan Terpercaya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      #home {
+        background-image: url("assets/background.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      /* nav */
+      .mobile-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+
+      .mobile-menu.open {
+        max-height: 500px;
+      }
+
+      .nav-link.active {
+        color: #047857;
+        font-weight: 600;
+        position: relative;
+      }
+
+      .nav-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #047857;
+      }
+      /* nav mobile */
+      .mobile-nav-link.active {
+        color: #ffffff;
+        font-weight: 600;
+        background-color: #047857;
+      }
+      /* faq */
+      .faq-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+      }
+
+      .faq-item.open .faq-content {
+        max-height: 500px;
+      }
+
+      @media (min-width: 768px) {
+      }
+      .faq-item.open .faq-arrow {
+        transform: rotate(180deg);
+      }
+      #scroll-to-top.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-gray-50">
+    <!-- Header/Navbar -->
+
+    <!-- Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-3">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a href="">
+              <img src="/assets/logo3.png" class="h-12 mr-3" alt="logo" />
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="nav-link text-gray-600 hover:text-emerald-700 transition active"
+              >Beranda</a
+            >
+            <a
+              href="#about"
+              class="nav-link text-gray-600 hover:text-emerald-700 transition"
+              >Tentang Kami</a
+            >
+            <a
+              href="#services"
+              class="nav-link text-gray-600 hover:text-emerald-700 transition"
+              >Layanan</a
+            >
+            <a
+              href="#facilities"
+              class="nav-link text-gray-600 hover:text-emerald-700 transition"
+              >Fasilitas</a
+            >
+            <a
+              href="#schedule"
+              class="nav-link text-gray-600 hover:text-emerald-700 transition"
+              >Jadwal Dokter</a
+            >
+            <a
+              href="#contact"
+              class="nav-link text-gray-600 hover:text-emerald-700 transition"
+              >Kontak</a
+            >
+          </nav>
+
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-button"
+            class="md:hidden text-gray-600 focus:outline-none"
+          >
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu md:hidden">
+          <div class="px-2 pt-2 pb-4 space-y-2">
+            <a
+              href="#home"
+              class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-teal-50 active"
+              >Beranda</a
+            >
+            <a
+              href="#about"
+              class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-teal-50"
+              >Tentang Kami</a
+            >
+            <a
+              href="#services"
+              class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-teal-50"
+              >Layanan</a
+            >
+            <a
+              href="#facilities"
+              class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-teal-50"
+              >Fasilitas</a
+            >
+            <a
+              href="#schedule"
+              class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-teal-50"
+              >Jadwal Dokter</a
+            >
+            <a
+              href="#contact"
+              class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-teal-50"
+              >Kontak</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative bg-cover bg-center text-white py-20"
+      style="background-image: url('assets/klinik2.jpg')"
+    >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+      <!-- Konten -->
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-10"
+      >
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h2 class="text-4xl font-bold mb-4">
+            Pelayanan Kesehatan Terbaik untuk Keluarga Anda
+          </h2>
+          <p class="text-xl mb-6">
+            Klinik kami menyediakan berbagai layanan kesehatan dengan dokter
+            berpengalaman dan fasilitas modern.
+          </p>
+          <div class="flex space-x-4">
+            <a
+              href="#contact"
+              class="bg-white text-emerald-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition"
+            >
+              Hubungi Kami
+            </a>
+            <a
+              href="#services"
+              class="border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-emerald-700 transition"
+            >
+              Layanan Kami
+            </a>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <img
+            src="assets/klinik.jpg"
+            alt=""
+            class="rounded-lg shadow-2xl max-w-md w-full"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+          Tentang Klinik Kami
+        </h2>
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+            <img
+              src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Klinik kami"
+              class="rounded-lg shadow-lg w-full"
+            />
+          </div>
+          <div class="md:w-1/2">
+            <h3 class="text-2xl font-bold mb-4 text-gray-800">
+              Klinik BTN Medical Center
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore,
+              illo.
+            </p>
+            <p class="text-gray-600 mb-6">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium ad id velit, assumenda laboriosam nisi temporibus?
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-blue-50 p-4 rounded-lg">
+                <i class="fas fa-user-md text-teal-600 text-2xl mb-2"></i>
+                <h4 class="font-medium">Dokter Berpengalaman</h4>
+                <p class="text-sm text-gray-600">
+                  Tim dokter spesialis dan umum yang kompeten
+                </p>
+              </div>
+              <div class="bg-blue-50 p-4 rounded-lg">
+                <i class="fas fa-procedures text-teal-600 text-2xl mb-2"></i>
+                <h4 class="font-medium">Fasilitas Modern</h4>
+                <p class="text-sm text-gray-600">
+                  Perlengkapan medis terkini untuk diagnosa akurat
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4 text-gray-900">
+          Layanan Kami
+        </h2>
+        <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+          Kami menyediakan berbagai layanan kesehatan untuk memenuhi kebutuhan
+          medis Anda dan keluarga.
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+          >
+            <div
+              class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-stethoscope text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Konsultasi Umum</h3>
+            <p class="text-gray-600 mb-4">
+              Pelayanan konsultasi dengan dokter umum untuk diagnosa dan
+              pengobatan penyakit umum.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+          >
+            <div
+              class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-heartbeat text-teal-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Kesehatan Jantung</h3>
+            <p class="text-gray-600 mb-4">
+              Pemeriksaan dan konsultasi kesehatan jantung dengan dokter
+              spesialis jantung.
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+          >
+            <div
+              class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-baby text-pink-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Kesehatan Anak</h3>
+            <p class="text-gray-600 mb-4">
+              Layanan khusus untuk kesehatan bayi dan anak dengan dokter
+              spesialis anak.
+            </p>
+          </div>
+
+          <!-- Service 4 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+          >
+            <div
+              class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-teeth text-yellow-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Kesehatan Gigi</h3>
+            <p class="text-gray-600 mb-4">
+              Perawatan gigi dan mulut oleh dokter gigi profesional dengan
+              teknologi terkini.
+            </p>
+          </div>
+
+          <!-- Service 5 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+          >
+            <div
+              class="bg-slate-100 w-16 h-16 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-eye text-slate-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Kesehatan Mata</h3>
+            <p class="text-gray-600 mb-4">
+              Pemeriksaan mata dan layanan kesehatan mata oleh dokter spesialis
+              mata.
+            </p>
+          </div>
+
+          <!-- Service 6 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+          >
+            <div
+              class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-flask text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Laboratorium</h3>
+            <p class="text-gray-600 mb-4">
+              Tes laboratorium untuk pemeriksaan darah, urine, dan tes
+              diagnostik lainnya.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+          Fasilitas Kami
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Facility 1 -->
+          <div class="relative group overflow-hidden rounded-lg shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Ruang Tunggu"
+              class="w-full h-64 object-cover transition duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-6 text-white">
+              <h3 class="text-xl font-semibold">Ruang Tunggu Nyaman</h3>
+              <p class="text-sm opacity-90">
+                Ruang tunggu yang luas dengan AC dan tempat duduk nyaman
+              </p>
+            </div>
+          </div>
+
+          <!-- Facility 2 -->
+          <div class="relative group overflow-hidden rounded-lg shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1581595219315-a187dd40c322?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Laboratorium"
+              class="w-full h-64 object-cover transition duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-6 text-white">
+              <h3 class="text-xl font-semibold">Laboratorium Modern</h3>
+              <p class="text-sm opacity-90">
+                Peralatan laboratorium terkini untuk hasil tes yang akurat
+              </p>
+            </div>
+          </div>
+
+          <!-- Facility 3 -->
+          <div class="relative group overflow-hidden rounded-lg shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Apotek"
+              class="w-full h-64 object-cover transition duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-6 text-white">
+              <h3 class="text-xl font-semibold">Apotek Lengkap</h3>
+              <p class="text-sm opacity-90">
+                Apotek dalam klinik dengan obat-obatan lengkap
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-4 gap-6">
+          <div class="flex items-center bg-teal-50 p-4 rounded-lg">
+            <i class="fas fa-parking text-blue-800 text-2xl mr-3"></i>
+            <div>
+              <h4 class="font-medium">Parkir Luas</h4>
+              <p class="text-sm text-gray-600">
+                Area parkir yang aman dan luas
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center bg-blue-50 p-4 rounded-lg">
+            <i class="fas fa-wheelchair text-fuchsia-600 text-2xl mr-3"></i>
+            <div>
+              <h4 class="font-medium">Akses Difabel</h4>
+              <p class="text-sm text-gray-600">
+                Fasilitas untuk penyandang disabilitas
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center bg-blue-50 p-4 rounded-lg">
+            <i class="fas fa-wifi text-amber-600 text-2xl mr-3"></i>
+            <div>
+              <h4 class="font-medium">WiFi Gratis</h4>
+              <p class="text-sm text-gray-600">Internet gratis untuk pasien</p>
+            </div>
+          </div>
+          <div class="flex items-center bg-blue-50 p-4 rounded-lg">
+            <i class="fas fa-coffee text-lime-600 text-2xl mr-3"></i>
+            <div>
+              <h4 class="font-medium">Area Istirahat</h4>
+              <p class="text-sm text-gray-600">Area dengan minuman gratis</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Doctor Schedule Section -->
+    <section id="schedule" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+          Jadwal Dokter
+        </h2>
+
+        <div class="overflow-x-auto">
+          <table
+            class="min-w-full bg-white rounded-lg overflow-hidden shadow-md"
+          >
+            <thead class="bg-teal-700 text-white">
+              <tr>
+                <th class="py-3 px-4 text-left">Hari</th>
+                <th class="py-3 px-4 text-left">Foto</th>
+                <!-- Kolom Foto -->
+                <th class="py-3 px-4 text-left">Nama Dokter</th>
+                <th class="py-3 px-4 text-left">Spesialisasi</th>
+                <th class="py-3 px-4 text-left">Jam Praktik</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <!--  Jadwal dengan foto -->
+              <tr>
+                <td class="py-4 px-4 font-medium">Senin</td>
+                <td class="py-4 px-4">
+                  <img
+                    src="assets/3.jpg"
+                    alt="gambar_dokter"
+                    class="w-12 h-12 rounded-full object-cover"
+                  />
+                </td>
+                <td class="py-4 px-4">nama_dokter</td>
+                <td class="py-4 px-4">Dokter Umum</td>
+                <td class="py-4 px-4">08:00 - 15:00</td>
+              </tr>
+
+              <tr class="bg-gray-50">
+                <td class="py-4 px-4"></td>
+                <td class="py-4 px-4">
+                  <img
+                    src="assets/12.png"
+                    alt="gambar_dokter"
+                    class="w-12 h-12 rounded-full object-cover"
+                  />
+                </td>
+                <td class="py-4 px-4">Nama Dokter</td>
+                <td class="py-4 px-4">Spesialis</td>
+                <td class="py-4 px-4">10:00 - 17:00</td>
+              </tr>
+
+              <tr>
+                <td class="py-4 px-4 font-medium">Selasa</td>
+                <td class="py-4 px-4">
+                  <img
+                    src="assets/"
+                    alt="gambar_dokter"
+                    class="w-12 h-12 rounded-full object-cover"
+                  />
+                </td>
+                <td class="py-4 px-4">nama_dokter</td>
+                <td class="py-4 px-4">Dokter Umum</td>
+                <td class="py-4 px-4">08:00 - 15:00</td>
+              </tr>
+
+              <tr class="bg-gray-50">
+                <td class="py-4 px-4"></td>
+                <td class="py-4 px-4">
+                  <img
+                    src="assets/"
+                    alt="gambar_dokter"
+                    class="w-12 h-12 rounded-full object-cover"
+                  />
+                </td>
+                <td class="py-4 px-4">nama_dokter</td>
+                <td class="py-4 px-4">Spesialis Anak</td>
+                <td class="py-4 px-4">10:00 - 17:00</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-4 font-medium">Rabu</td>
+                <td class="py-4 px-4">
+                  <img
+                    src="assets/"
+                    alt="gambar_dokter"
+                    class="w-12 h-12 rounded-full object-cover"
+                  />
+                </td>
+                <td class="py-4 px-4">nama_dokter</td>
+                <td class="py-4 px-4">Dokter Umum</td>
+                <td class="py-4 px-4">08:00 - 15:00</td>
+              </tr>
+
+              <tr class="bg-gray-50">
+                <td class="py-4 px-4"></td>
+                <td class="py-4 px-4">
+                  <img
+                    src="assets/"
+                    alt="gambar_dokter"
+                    class="w-12 h-12 rounded-full object-cover"
+                  />
+                </td>
+                <td class="py-4 px-4">nama_dokter</td>
+                <td class="py-4 px-4">Spesialis Anak</td>
+                <td class="py-4 px-4">10:00 - 17:00</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-4 font-medium">Kamis</td>
+                <td class="py-4 px-4">
+                  <img
+                    src="assets/"
+                    alt="gambar_dokter"
+                    class="w-12 h-12 rounded-full object-cover"
+                  />
+                </td>
+                <td class="py-4 px-4">nama_dokter</td>
+                <td class="py-4 px-4">Dokter Umum</td>
+                <td class="py-4 px-4">08:00 - 15:00</td>
+              </tr>
+
+              <tr class="bg-gray-50">
+                <td class="py-4 px-4"></td>
+                <td class="py-4 px-4">
+                  <img
+                    src="assets/"
+                    alt="gambar_dokter"
+                    class="w-12 h-12 rounded-full object-cover"
+                  />
+                </td>
+                <td class="py-4 px-4">nama_dokter</td>
+                <td class="py-4 px-4">Spesialis Anak</td>
+                <td class="py-4 px-4">10:00 - 17:00</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-4 font-medium">Jum'at</td>
+                <td class="py-4 px-4">
+                  <img
+                    src="assets/"
+                    alt="gambar_dokter"
+                    class="w-12 h-12 rounded-full object-cover"
+                  />
+                </td>
+                <td class="py-4 px-4">nama_dokter</td>
+                <td class="py-4 px-4">Dokter Umum</td>
+                <td class="py-4 px-4">08:00 - 15:00</td>
+              </tr>
+
+              <tr class="bg-gray-50">
+                <td class="py-4 px-4"></td>
+                <td class="py-4 px-4">
+                  <img
+                    src="assets/"
+                    alt="gambar_dokter"
+                    class="w-12 h-12 rounded-full object-cover"
+                  />
+                </td>
+                <td class="py-4 px-4">nama_dokter</td>
+                <td class="py-4 px-4">Spesialis Anak</td>
+                <td class="py-4 px-4">10:00 - 17:00</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-4 font-medium">Sabtu</td>
+                <td class="py-4 px-4">
+                  <img
+                    src="assets/"
+                    alt="gambar_dokter"
+                    class="w-12 h-12 rounded-full object-cover"
+                  />
+                </td>
+                <td class="py-4 px-4">nama_dokter</td>
+                <td class="py-4 px-4">Dokter Umum</td>
+                <td class="py-4 px-4">08:00 - 15:00</td>
+              </tr>
+
+              <tr class="bg-gray-50">
+                <td class="py-4 px-4"></td>
+                <td class="py-4 px-4">
+                  <img
+                    src="assets/"
+                    alt="gambar_dokter"
+                    class="w-12 h-12 rounded-full object-cover"
+                  />
+                </td>
+                <td class="py-4 px-4">nama_dokter</td>
+                <td class="py-4 px-4">Spesialis Anak</td>
+                <td class="py-4 px-4">10:00 - 17:00</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-4 font-medium">Minggu</td>
+                <td class="py-4 px-4">
+                  <img
+                    src="assets/"
+                    alt="gambar_dokter"
+                    class="w-12 h-12 rounded-full object-cover"
+                  />
+                </td>
+                <td class="py-4 px-4">nama_dokter</td>
+                <td class="py-4 px-4">Dokter Umum</td>
+                <td class="py-4 px-4">08:00 - 15:00</td>
+              </tr>
+
+              <tr class="bg-gray-50">
+                <td class="py-4 px-4"></td>
+                <td class="py-4 px-4">
+                  <img
+                    src="assets/"
+                    alt="gambar_dokter"
+                    class="w-12 h-12 rounded-full object-cover"
+                  />
+                </td>
+                <td class="py-4 px-4">nama_dokter</td>
+                <td class="py-4 px-4">Spesialis Anak</td>
+                <td class="py-4 px-4">10:00 - 17:00</td>
+              </tr>
+
+              <!-- Baris lainnya, tinggal sesuaikan nama file gambar dan dokter -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-8 bg-yellow-50 border-l-4 border-yellow-400 p-4">
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <i class="fas fa-exclamation-circle text-yellow-500"></i>
+            </div>
+            <div class="ml-3">
+              <p class="text-sm text-yellow-700">
+                Jadwal dapat berubah sewaktu-waktu. Silakan hubungi klinik untuk
+                konfirmasi jadwal dokter.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-teal-700 text-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          Apa Kata Pasien Kami
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg">
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/women/32.jpg"
+                alt="Testimonial"
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-semibold">Dewi Lestari</h4>
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="italic">
+              "Pelayanan di Klinik Sehat Bahagia sangat memuaskan. Dokter ramah
+              dan penjelasannya mudah dimengerti. Ruangannya juga bersih dan
+              nyaman."
+            </p>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg">
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/men/45.jpg"
+                alt="Testimonial"
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-semibold">Budi Santoso</h4>
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+            <p class="italic">
+              "Anak saya sering berobat ke dokter spesialis anak di sini.
+              Dokternya sangat sabar dan teliti dalam memeriksa. Hasilnya anak
+              saya cepat sembuh."
+            </p>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg">
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="Testimonial"
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-semibold">Siti Aminah</h4>
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="italic">
+              "Saya rutin kontrol jantung di klinik ini. Dokter spesialis
+              jantungnya sangat kompeten dan peralatan medisnya lengkap. Sangat
+              direkomendasikan!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+          Hubungi Kami
+        </h2>
+
+        <div class="flex flex-col md:flex-row gap-8">
+          <div class="md:w-1/2">
+            <div class="bg-gray-50 p-6 rounded-lg shadow-md h-full">
+              <h3 class="text-xl font-bold mb-4 text-gray-900">
+                Informasi Kontak
+              </h3>
+
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <i
+                    class="fas fa-map-marker-alt text-2xl text-red-600 mt-1 mr-3"
+                  ></i>
+                  <div>
+                    <h4 class="font-medium">Alamat</h4>
+                    <p class="text-gray-600">
+                      Jl. Kesehatan No. 123, Kelurahan Sejahtera, Kecamatan
+                      Bahagia, Kota Bandung, Jawa Barat 40123
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-center">
+                  <i
+                    class="fa-brands fa-whatsapp text-2xl text-green-600 mr-3"
+                  ></i>
+                  <div>
+                    <h4 class="font-medium">WhatsApp</h4>
+                    <p class="text-gray-600">0812 3456 7890</p>
+                  </div>
+                </div>
+
+                <div class="flex items-center">
+                  <i class="fas fa-envelope text-xl text-blue-600 mr-3"></i>
+                  <div>
+                    <h4 class="font-medium">Email</h4>
+                    <p class="text-gray-600">info@kliniksehatbahagia.com</p>
+                  </div>
+                </div>
+
+                <div class="flex items-center">
+                  <i class="fas fa-clock text-xl text-teal-700 mr-3"></i>
+                  <div>
+                    <h4 class="font-medium">Jam Operasional</h4>
+                    <p class="text-gray-600">
+                      Senin-Jumat: 08:00 - 21:00 WIB<br />
+                      Sabtu: 09:00 - 17:00 WIB<br />
+                      Minggu & Hari Libur: Tutup
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6">
+                <h4 class="font-medium mb-2 text-gray-900">Ikuti Kami</h4>
+                <div class="flex space-x-4">
+                  <a
+                    href="#"
+                    class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/klinikbtn?igsh=NjZlajY4OWI5OTF6"
+                    class="bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center text-pink-600 hover:bg-pink-200 transition"
+                  >
+                    <i class="fab fa-instagram text-pink-600"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition"
+                  >
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition"
+                  >
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 rounded-lg overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.923450441574!2d107.60885131529422!3d-6.902890669424938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e639fb4a3a61%3A0x2e6b8b8b8b8b8b8b!2sJl.%20Kesehatan%20No.123%2C%20Kel.%20Sejahtera%2C%20Kec.%20Bahagia%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040123!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid"
+            width="100%"
+            height="400"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+          Pertanyaan yang Sering Diajukan
+        </h2>
+
+        <div class="max-w-3xl mx-auto space-y-4">
+          <!-- FAQ 1 -->
+          <div
+            class="faq-item border border-gray-200 rounded-lg overflow-hidden"
+          >
+            <button
+              class="faq-button w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 transition"
+            >
+              <h3 class="text-left font-medium">Pertanyaan</h3>
+              <i
+                class="fas fa-chevron-down faq-arrow text-teal-700 transition-transform duration-300"
+              ></i>
+            </button>
+            <div class="faq-content bg-gray-50 border-t border-gray-200">
+              <div class="p-4">
+                <p class="text-gray-600">Jawaban</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div
+            class="faq-item border border-gray-200 rounded-lg overflow-hidden"
+          >
+            <button
+              class="faq-button w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 transition"
+            >
+              <h3 class="text-left font-medium">Pertanyaan</h3>
+              <i
+                class="fas fa-chevron-down faq-arrow text-teal-700 transition-transform duration-300"
+              ></i>
+            </button>
+            <div class="faq-content bg-gray-50 border-t border-gray-200">
+              <div class="p-4">
+                <p class="text-gray-600">Jawaban</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div
+            class="faq-item border border-gray-200 rounded-lg overflow-hidden"
+          >
+            <button
+              class="faq-button w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 transition"
+            >
+              <h3 class="text-left font-medium">Pertanyaan</h3>
+              <i
+                class="fas fa-chevron-down faq-arrow text-teal-700 transition-transform duration-300"
+              ></i>
+            </button>
+            <div class="faq-content bg-gray-50 border-t border-gray-200">
+              <div class="p-4">
+                <p class="text-gray-600">Jawaban</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div
+            class="faq-item border border-gray-200 rounded-lg overflow-hidden"
+          >
+            <button
+              class="faq-button w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 transition"
+            >
+              <h3 class="text-left font-medium">Pertanyaan</h3>
+              <i
+                class="fas fa-chevron-down faq-arrow text-teal-700 transition-transform duration-300"
+              ></i>
+            </button>
+            <div class="faq-content bg-gray-50 border-t border-gray-200">
+              <div class="p-4">
+                <p class="text-gray-600">Jawaban</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div
+            class="faq-item border border-gray-200 rounded-lg overflow-hidden"
+          >
+            <button
+              class="faq-button w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 transition"
+            >
+              <h3 class="text-left font-medium">Pertanyaan</h3>
+              <i
+                class="fas fa-chevron-down faq-arrow text-teal-700 transition-transform duration-300"
+              ></i>
+            </button>
+            <div class="faq-content bg-gray-50 border-t border-gray-200">
+              <div class="p-4">
+                <p class="text-gray-600">Jawaban</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-teal-900 text-white pt-12 pb-6">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+          <!-- About -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Tentang Kami</h3>
+            <p class="mb-4 text-gray-300">Tentang Klinik BTN</p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-300 hover:text-blue-600"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-gray-300 hover:text-pink-600"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-gray-300 hover:text-red-600"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Tautan Cepat</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#home" class="text-gray-300 hover:text-white"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a href="#about" class="text-gray-300 hover:text-white"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="text-gray-300 hover:text-white"
+                  >Layanan</a
+                >
+              </li>
+              <li>
+                <a href="#facilities" class="text-gray-300 hover:text-white"
+                  >Fasilitas</a
+                >
+              </li>
+              <li>
+                <a href="#schedule" class="text-gray-300 hover:text-white"
+                  >Jadwal Dokter</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="text-gray-300 hover:text-white"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Layanan Kami</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Konsultasi Umum</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Kesehatan Jantung</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Kesehatan Anak</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Kesehatan Gigi</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Kesehatan Mata</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white"
+                  >Laboratorium</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Kontak Kami</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3 text-gray-300"></i>
+                <span class="text-gray-200">Subah</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fa-brands fa-whatsapp mr-3 text-gray-300"></i>
+                <span class="text-gray-200">(022) 1234567</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope mr-3 text-gray-300"></i>
+                <span class="text-gray-200">info@kliniksehatbahagia.com</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-clock mr-3 text-gray-300"></i>
+                <span class="text-gray-200">Senin-Jumat: 08:00-21:00</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-white pt-6 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-white text-sm mb-4 md:mb-0">
+            © 2025 Klinik BTN Medical Center. Semua hak dilindungi.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-white hover:text-white text-sm"
+              >Kebijakan Privasi</a
+            >
+            <a href="#" class="text-white hover:text-white text-sm"
+              >Syarat & Ketentuan</a
+            >
+            <a href="#" class="text-white hover:text-white text-sm"
+              >Peta Situs</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      id="scroll-to-top"
+      class="fixed bottom-6 right-6 p-3 h-12 w-12 rounded-full bg-emerald-700 text-white shadow-lg opacity-0 pointer-events-none transition-opacity duration-300"
+      aria-label="Scroll ke atas"
+    >
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const scrollBtn = document.getElementById("scroll-to-top");
+
+        // Tampilkan tombol jika scroll lebih dari 300px
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 300) {
+            scrollBtn.classList.add("show");
+          } else {
+            scrollBtn.classList.remove("show");
+          }
+        });
+
+        // Scroll ke atas saat tombol diklik
+        scrollBtn.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // FAQ Toggle
+      document.querySelectorAll(".faq-button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const faqItem = button.closest(".faq-item");
+
+          // Tutup semua FAQ lain (opsional, jika ingin hanya satu yang terbuka)
+          document.querySelectorAll(".faq-item").forEach((item) => {
+            if (item !== faqItem) {
+              item.classList.remove("open");
+            }
+          });
+
+          // Toggle FAQ yang diklik
+          faqItem.classList.toggle("open");
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Ambil elemen menu
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const menuIcon = mobileMenuButton
+          ? mobileMenuButton.querySelector("i")
+          : null;
+
+        // Throttle function (diletakkan di awal agar tidak error hoisting)
+        let throttleTimer;
+        function throttle(callback, time) {
+          if (throttleTimer) return;
+          throttleTimer = true;
+          setTimeout(() => {
+            callback();
+            throttleTimer = false;
+          }, time);
+        }
+
+        // Toggle mobile menu
+        const toggleMobileMenu = () => {
+          if (!mobileMenu || !menuIcon) return;
+
+          const isOpen = mobileMenu.classList.toggle("open");
+          menuIcon.classList.toggle("fa-bars");
+          menuIcon.classList.toggle("fa-times");
+          document.body.style.overflow = isOpen ? "hidden" : "";
+        };
+
+        // Event tombol mobile menu
+        if (mobileMenuButton) {
+          mobileMenuButton.addEventListener("click", toggleMobileMenu);
+        }
+
+        // Tutup menu saat klik link di mobile
+        document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (!mobileMenu || !menuIcon) return;
+            mobileMenu.classList.remove("open");
+            menuIcon.classList.remove("fa-times");
+            menuIcon.classList.add("fa-bars");
+            document.body.style.overflow = "";
+          });
+        });
+
+        // Active menu indicator
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(
+          ".nav-link, .mobile-nav-link"
+        );
+        let currentSection = "";
+
+        const updateActiveMenu = () => {
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            const sectionId = section.getAttribute("id");
+
+            if (
+              window.scrollY >= sectionTop - 100 &&
+              window.scrollY < sectionTop + sectionHeight - 100
+            ) {
+              currentSection = sectionId;
+            }
+          });
+
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${currentSection}`) {
+              link.classList.add("active");
+            }
+          });
+        };
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: "smooth",
+              });
+
+              if (history.pushState) {
+                history.pushState(null, null, targetId);
+              } else {
+                window.location.hash = targetId;
+              }
+            }
+          });
+        });
+
+        // Scroll handler tambahan (jika perlu fungsi lain)
+        const scrollHandler = () => {
+          // Tambahkan fungsi lain di sini
+        };
+
+        // Event listeners
+        window.addEventListener("scroll", () => {
+          updateActiveMenu();
+          throttle(scrollHandler, 100);
+        });
+
+        window.addEventListener("resize", updateActiveMenu);
+        updateActiveMenu(); // panggil awal
+      });
+    </script>
+  </body>
+</html>
